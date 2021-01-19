@@ -186,6 +186,7 @@
     <Content Include="Views\SocMgmt\HistoryTab.cshtml" />
     <Content Include="Views\SocMgmt\AdvanceTab.cshtml" />
     <Content Include="Views\SocMgmt\DuesTab.cshtml" />
+    <Content Include="Views\SocMgmt\MyUnitTab.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

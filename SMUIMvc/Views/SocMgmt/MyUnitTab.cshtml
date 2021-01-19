@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MyUnitTab</title>
+</head>
+<body>
+    <div>
+        <!-- Tab Buttons -->
+        <ul id="tabstrip" class="nav nav-tabs" role="tablist">
+            <li class="active">
+                <a href="#tab-dues" role="tab" data-toggle="tab">Dues</a>
+            </li>
+            <li>
+                <a href="#tab-advance" role="tab" data-toggle="tab">Advance</a>
+            </li>
+            <li>
+                <a href="#tab-deposits" role="tab" data-toggle="tab">Deposits</a>
+            </li>
+            <li>
+                <a href="#tab-history" role="tab" data-toggle="tab">History</a>
+            </li>
+        </ul>
+        <!-- Tab Content Containers -->
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="tab-dues">
+                <!-- Call partial view to load initial page load data -->
+                @Html.Partial("DuesTab")
+            </div>
+            <div class="tab-pane fade" id="tab-advance">
+                @Html.Partial("AdvanceTab")
+            </div>
+            <div class="tab-pane fade" id="tab-deposits">
+                @Html.Partial("DepositsTab")
+            </div>
+            <div class="tab-pane fade" id="tab-history">
+                @Html.Partial("HistoryTab")
+            </div>
+        </div>
+    </div>
+</body>
+</html>

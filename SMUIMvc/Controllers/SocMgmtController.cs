@@ -40,5 +40,11 @@ namespace SMUIMvc.Controllers
         {
             return PartialView("AdvanceTab");
         }
+
+        public ActionResult MyUnitTab()
+        {
+            return PartialView("MyUnitTab");
+
+        }
     }
 }

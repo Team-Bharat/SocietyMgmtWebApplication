@@ -16,104 +16,80 @@
 
 </head>
 <body>
-    <form id="homeApt2-form" class="form" action="myAccount" method="post">
-        <div>
-            <table border="0" align="center" width="60%">
-                <tr align="center"><td colspan="3"><span>Hello <b>Jimmy Johns</b><br /> Apartment : MIG 2 - 12D</span></td></tr>
-                <tr><td colspan="3">&nbsp;</td></tr>
-                <tr align="center"><td> 1 Member</td><td> 0 Vehicles</td><td> 0 Documents</td></tr>
-                <tr><td colspan="3">&nbsp;</td></tr>
-                <tr><td colspan="3" align="center"><span><b> Total Amount Due:</b><br /> Rs. 1800</span></td></tr>
-                <tr><td colspan="3">&nbsp;</td></tr>
-                <tr>
-                    <td colspan="3">
-                        <table border="0" width="100%">
-                            <tr>
-                                <td colspan="4">
 
-                                    <ul class="nav nav-tabs">
-                                        <li class="active">
-                                            <a href="#myunit" data-toggle="tab">My Unit</a>
-                                        </li>
-                                        <li>
-                                            <a href="#Community" data-toggle="tab">Community</a>
-                                        </li>
-                                        <li>
-                                            <a href="#more" data-toggle="tab">More</a>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="4">&nbsp;</td></tr>
-                            <tr>
-                                <td colspan="4">
-                                    <div class="tab-content">
-                                        <div class="tab-pane active" id="myunit">
+    <div>
+        <table border="0" align="center" width="60%">
+            <tr align="center"><td colspan="3"><span>Hello <b>Jimmy Johns</b><br /> Apartment : MIG 2 - 12D</span></td></tr>
+            <tr><td colspan="3">&nbsp;</td></tr>
+            <tr align="center"><td> 1 Member</td><td> 0 Vehicles</td><td> 0 Documents</td></tr>
+            <tr><td colspan="3">&nbsp;</td></tr>
+            <tr><td colspan="3" align="center"><span><b> Total Amount Due:</b><br /> Rs. 1800</span></td></tr>
+            <tr><td colspan="3">&nbsp;</td></tr>
+            <tr>
+                <td colspan="3">
+                    <table border="0" width="100%">
+                        <tr>
+                            <td colspan="4">
 
-
-                                            <!-- Tab Buttons -->
-                                            <ul id="tabstrip" class="nav nav-tabs" role="tablist">
-                                                <li class="active">
-                                                    <a href="#DuesTab" role="tab" data-toggle="tab">Dues</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#AdvanceTab" role="tab" data-toggle="tab">Advance</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#DepositsTab" role="tab" data-toggle="tab">Deposits</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#HistoryTab" role="tab" data-toggle="tab">History</a>
-                                                </li>
-                                            </ul>
-                                            <!-- Tab Content Containers -->
-                                            <div class="tab-content">
-                                                <div class="tab-pane fade in active" id="DuesTab">
-                                                    <!-- Call partial view to load initial page load data -->
-                                                    @Html.Partial("DuesTab")
-                                                </div>
-                                                <div class="tab-pane fade" id="AdvanceTab">
-                                                    @Html.Partial("AdvanceTab")
-                                                </div>
-                                                <div class="tab-pane fade" id="DepositsTab">
-                                                    @Html.Partial("DepositsTab")
-                                                </div>
-                                                <div class="tab-pane fade" id="HistoryTab">
-                                                    @Html.Partial("HistoryTab")
-                                                </div>
-                                            </div>
-
-
-
-                                        </div>
-                                        <div class="tab-pane" id="Community">
-                                            <p>Content for Community goes here.</p>
-                                        </div>
-                                        <div class="tab-pane" id="more">
-                                            <p>Content for More goes here.</p>
-                                        </div>
+                                <ul class="nav nav-tabs">
+                                    <li>
+                                        <a href="#tab-home" data-toggle="tab">Home</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="#tab-myunit" data-toggle="tab">My Unit</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab-community" data-toggle="tab">Community</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tab-more" data-toggle="tab">More</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="tab-home" type="submit">
+                                        <form id="homeApt2-form" class="form" action="home" method="post">
+                                            <input type="submit" name="submit" class="btn btn-info btn-md" value="Home">                                            
+                                        </form>
                                     </div>
+                                    <div class="tab-pane active" id="tab-myunit">
 
-                                </td>
-                            </tr>
+                                        @Html.Partial("MyUnitTab")
 
-                            <tr>
-                                <td colspan="4">&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#tabs-home">Home</a></td>
-                                <td><a href="#tabs-myunit">My Unit</a></td>
-                                <td><a href="#tabs-community">Community</a></td>
-                                <td><a href="#tabs-more">More</a></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>-->
+                                    </div>
+                                    <div class="tab-pane" id="tab-community">
+                                        <p>Content for Community goes here.</p>
+                                    </div>
+                                    <div class="tab-pane" id="tab-more">
+                                        <p>Content for More goes here.</p>
+                                    </div>
+                                </div>
 
-            </table>
-        </div>
-    </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="4">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#tabs-home">Home</a></td>
+                            <td><a href="#tabs-myunit">My Unit</a></td>
+                            <td><a href="#tabs-community">Community</a></td>
+                            <td><a href="#tabs-more">More</a></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>-->
+
+        </table>
+    </div>
+
 
 
 
